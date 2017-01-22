@@ -1,0 +1,3 @@
+Insert into players (name) values ('Harry');
+
+select count(*) from players;
