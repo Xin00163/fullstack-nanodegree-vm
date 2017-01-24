@@ -1,3 +1,6 @@
 Insert into players (name) values ('Harry');
 
 select count(*) from players;
+
+
+select player.name count(player.name)as win_total from players, matches where players.id = matches.winner group by player.name order by win_total desc; 
