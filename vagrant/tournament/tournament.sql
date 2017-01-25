@@ -36,7 +36,7 @@ CREATE VIEW wins AS
       GROUP BY players.id;
 
 CREATE VIEW count AS
-      SELECT players.id, count(matches.winner) AS n FROM players
+      SELECT players.id, count(matches.matches_id) AS n FROM players
       LEFT JOIN matches ON players.id = matches.winner
       OR players.id = matches.loser
       GROUP BY players.id;
